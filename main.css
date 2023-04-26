@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1d9e35;
+    --secondary-color: #fff;
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+
+header {
+    background-color: var(--primary-color);
+}
+
+h1 {
+    font-family: 'Fredericka the Great', cursive;
+    color: var(--secondary-color);
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    font-style: italic;
+    font-weight: bolder;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    ;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+/* Smartphones */
+@media screen and (max-width: 640px) {
+
+    .container-navegacao {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5vw;
+    }
+
+    h1 {
+        font-size: 6vw;
+        font-weight: bolder;
+    }
+
+
+    nav a {
+        font-size: 2.5vw;
+    }
+
+    .container-sobre img {
+        display: block;
+        height: 60vw;
+        margin: 5vw auto;
+    }
+
+    .container-sobre h2 {
+        font-size: 5vw;
+        margin: 5vw;
+    }
+
+    .container-sobre p {
+        font-size: 4vw;
+        text-align: justify;
+        margin: 5vw;
+    }
+
+    .produtos {
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 3%;
+        text-align: center;
+    }
+
+    .container-produtos {
+        margin: 5vw;
+    }
+
+    .container-produtos h2 {
+        margin-bottom: 5vw;
+        font-size: 5vw;
+    }
+
+    .produto img {
+        width: 50vw;
+    }
+
+    .produto h3 {
+        font-size: 6vw;
+    }
+
+    .produto p {
+        font-size: 4vw;
+        margin-bottom: 3vw
+    }
+
+    button {
+        width: 80vw;
+        padding: 3vw;
+        font-size: 3vw;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .container-navegacao {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2vw;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    nav a {
+        font-size: 3vw;
+    }
+
+    .container-sobre {
+        display: flex;
+        flex-direction: column;
+        margin: 5vw;
+    }
+
+    .container-sobre img {
+        height: 60vw;
+        margin: auto;
+    }
+
+    .container-sobre h2 {
+        font-size: 3vw;
+        margin-top: 3vw;
+    }
+
+    .container-sobre p {
+        font-size: 2vw;
+    }
+
+    h2#produtos {
+        font-size: 3.5vw;
+        margin: 5vw;
+        display: block;
+        text-align: left;
+    }
+
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        column-gap: 2%;
+        row-gap: 2%;
+        margin: auto 3vw;
+    }
+
+    .produto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 50vw;
+        height: 100%;
+        text-align: center;
+    }
+
+    .produto img {
+        width: 30vw;
+        margin: auto;
+    }
+
+    .produto h3 {
+        font-size: 3vw;
+    }
+
+    .produto p {
+        font-size: 2.5vw;
+    }
+
+    button {
+        width: 40vw;
+        padding: 1vw;
+        font-size: 2.5vw;
+        margin: auto;
+
+    }
+}
+
+/* Modo Paisagem */
+@media screen and (orientation: landscape) and (min-width: 1024px) {
+    .container-navegacao {
+        padding: 2vw;
+    }
+
+    h1 {
+        font-size: 3vw;
+    }
+
+    nav a {
+        font-size: 2.5vw;
+        margin-left: 1.5vw;
+    }
+
+    .container-sobre {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        margin: 5vw;
+    }
+
+    .container-sobre img {
+        width: 30vw;
+    }
+
+    .container-descricao h2 {
+        font-size: 2vw;
+    }
+
+    .container-descricao p {
+        font-size: 1.7vw;
+        margin-top: 1vw;
+    }
+
+    .container-produtos h2 {
+        font-size: 2vw;
+    }
+
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(4, 23%);
+        column-gap: 2%;
+        row-gap: 3%;
+        text-align: center;
+    }
+
+    .produto {
+        width: 20vw;
+        height: 50vw;
+    }
+
+    .produto img {
+        width: 20vw;
+    }
+
+    .produto h3 {
+        font-size: 1.8vw;
+    }
+
+    .produto p {
+        font-size: 4vw;
+    }
+
+    .produto button {
+        display: flex;
+        justify-content: center;
+        bottom: 0;
+        margin: auto;
+        width: 90%;
+        padding: 1vw;
+        font-size: 0.8vw;
+    }
+}
+
+/* Desktops */
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1024px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .container-navegacao {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 3vw;
+    }
+
+    nav a {
+        font-size: 2vw;
+    }
+
+    .container-sobre {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        column-gap: 1%;
+        margin: 5% auto;
+    }
+
+    .container-sobre img {
+        height: 30vw;
+    }
+
+    .container-descricao {
+        margin-left: 5vw;
+    }
+
+    .container-descricao h2 {
+        font-size: 2.2vw;
+    }
+
+    .container-descricao p {
+        font-size: 1.5vw;
+        margin-top: 2.5vw;
+    }
+
+    .container-produtos h2 {
+        font-size: 2.2vw;
+    }
+
+    .produtos {
+        display: grid;
+        grid-template-columns: repeat(4, 23.5%);
+        column-gap: 2%;
+        text-align: center;
+        margin-top: 2vw;
+    }
+
+    .produto {
+        margin: auto;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .produto img {
+        width: 80%;
+    }
+
+    .produto h3 {
+        font-size: 150%;
+        margin-top: 5%;
+    }
+
+    .produto p {
+        font-size: 100%;
+        padding: 2%;
+    }
+
+    .produto button {
+        margin-top: 5%;
+        width: 80%;
+        padding: 5%;
+        font-size: 90%;
+    }
+}
