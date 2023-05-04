@@ -5,12 +5,13 @@
 }
 
 :root {
-    --primary-color: #1d9e35;
+    --primary-color: #2dbd8d;
     --secondary-color: #fff;
 }
 
 body {
     background-color: var(--secondary-color);
+    font-family: 'Raleway', sans-serif;
 }
 
 header {
@@ -26,7 +27,6 @@ h2 {
     color: var(--primary-color);
     border-bottom: 3px solid var(--primary-color);
     font-style: italic;
-    font-weight: bolder;
 }
 
 nav a {
@@ -35,129 +35,238 @@ nav a {
     ;
 }
 
+.produto h3 {
+    font-weight: bolder;
+}
+
 button {
+    background-color: var(--secondary-color);
+    color: #000;
+    border: 0.1px solid #000;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+button:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    border: none;
-    border-radius: 7px;
-    font-weight: bold;
 }
+
+footer {
+    background-color: #22956f;
+    color: var(--secondary-color);
+}
+
+.container-rodape h2 {
+    color: var(--secondary-color);
+    border: none;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+#direitos-autorais {
+    text-align: center;
+}
+
+
 
 /* Smartphones */
 @media screen and (max-width: 640px) {
+    .container {
+        max-width: 600px;
+        margin: 0 20px;
+    }
 
     .container-navegacao {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 5vw;
+        padding: 20px;
+        width: 88%;
+        margin: auto;
     }
 
     h1 {
-        font-size: 6vw;
+        font-size: 35px;
         font-weight: bolder;
     }
 
 
     nav a {
-        font-size: 2.5vw;
+        font-size: 24px;
+        margin: 10px;
+    }
+
+    .container-sobre {
+        margin: 15px 20px;
     }
 
     .container-sobre img {
         display: block;
-        height: 60vw;
-        margin: 5vw auto;
+        height: 300px;
+        margin: auto;
+        width: 88%;
     }
 
     .container-sobre h2 {
-        font-size: 5vw;
-        margin: 5vw;
+        font-size: 25px;
+        margin: 20px auto 0 auto;
+        width: 88%;
     }
 
     .container-sobre p {
-        font-size: 4vw;
+        font-size: 18px;
         text-align: justify;
-        margin: 5vw;
+        margin: 15px auto 0 auto;
+        width: 88%;
     }
 
-    .produtos {
-        display: grid;
-        grid-template-columns: 100%;
-        row-gap: 3%;
-        text-align: center;
-    }
 
     .container-produtos {
-        margin: 5vw;
+        margin: 20px 20px;
     }
 
     .container-produtos h2 {
-        margin-bottom: 5vw;
-        font-size: 5vw;
+        margin: 0 auto 10px auto;
+        font-size: 25px;
+        width: 88%;
     }
 
-    .produto img {
-        width: 50vw;
+    .produtos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .produto {
+        width: 88%;
+        margin: auto;
+    }
+
+    .produto>img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .produto-descricao {
+        margin: 20px auto;
     }
 
     .produto h3 {
-        font-size: 6vw;
+        font-size: 30px;
     }
 
     .produto p {
-        font-size: 4vw;
-        margin-bottom: 3vw
+        font-size: 25px;
+        margin: auto;
+        width: 80%;
     }
 
     button {
-        width: 80vw;
-        padding: 3vw;
-        font-size: 3vw;
+        width: 80%;
+        padding: 10px;
+        font-size: 20px;
+        justify-content: center;
+        margin: 0 auto 20px auto;
+    }
+
+    .produto button img {
+        width: 30px;
+        margin: 0;
+    }
+
+    .container-rodape {
+        margin: 40px auto 0 auto;
+    }
+
+    .container-rodape h2 {
+        padding-top: 10px;
+        font-size: 30px;
+    }
+
+    .container-rodape img {
+        height: 50px;
+        margin: 15px;
+    }
+
+    .container-rodape div {
+        font-size: 20px;
     }
 }
 
+
+
+
+
 /* Tablet */
 @media screen and (min-width: 641px) and (max-width: 1023px) {
+
+    .container {
+        max-width: 641px;
+        width: 100%;
+        margin: auto 20px;
+    }
+
     .container-navegacao {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 2vw;
+        padding: 10px;
+        margin: auto;
     }
 
     h1 {
-        font-size: 5vw;
+        font-size: 40px;
     }
 
     nav a {
-        font-size: 3vw;
+        font-size: 25px;
+        margin-left: 10px;
     }
 
     .container-sobre {
         display: flex;
         flex-direction: column;
-        margin: 5vw;
-    }
-
-    .container-sobre img {
-        height: 60vw;
+        align-items: center;
         margin: auto;
     }
 
+    .container-sobre img {
+        width: 100%;
+        margin: 30px auto;
+    }
+
     .container-sobre h2 {
-        font-size: 3vw;
-        margin-top: 3vw;
+        font-size: 27px;
+        margin: 20px auto;
     }
 
     .container-sobre p {
-        font-size: 2vw;
+        font-size: 20px;
+        margin-top: 25px;
+    }
+
+    .container-produtos {
+        margin: auto;
     }
 
     h2#produtos {
-        font-size: 3.5vw;
-        margin: 5vw;
-        display: block;
-        text-align: left;
+        font-size: 27px;
+        margin: 20px auto;
     }
 
     .produtos {
@@ -165,38 +274,68 @@ button {
         grid-template-columns: repeat(2, 49%);
         column-gap: 2%;
         row-gap: 2%;
-        margin: auto 3vw;
     }
 
     .produto {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-width: 50vw;
+        max-width: 100%;
         height: 100%;
         text-align: center;
     }
 
     .produto img {
-        width: 30vw;
+        max-height: 400px;
+        width: 100%;
         margin: auto;
+    }
+
+    .produto-descricao {
+        margin: 10px;
+        padding: 13px 0;
     }
 
     .produto h3 {
-        font-size: 3vw;
+        font-size: 25px;
     }
 
     .produto p {
-        font-size: 2.5vw;
+        font-size: 20px;
     }
 
     button {
-        width: 40vw;
-        padding: 1vw;
-        font-size: 2.5vw;
+        width: 80%;
+        padding: 9px;
+        font-size: 20px;
         margin: auto;
-
+        display: flex;
+        justify-content: center;
     }
+
+    .produto button img {
+        width: 30px;
+        margin: 0;
+    }
+
+    .container-rodape {
+        margin: 40px auto 0 auto;
+    }
+
+    .container-rodape h2 {
+        padding-top: 10px;
+        font-size: 30px;
+    }
+
+    .container-rodape img {
+        height: 50px;
+        margin: 15px;
+    }
+
+    .container-rodape div {
+        font-size: 20px;
+    }
+
 }
 
 /* Modo Paisagem */
@@ -205,36 +344,10 @@ button {
         padding: 2vw;
     }
 
-    h1 {
-        font-size: 3vw;
-    }
-
-    nav a {
-        font-size: 2.5vw;
-        margin-left: 1.5vw;
-    }
-
     .container-sobre {
         display: grid;
         grid-template-columns: 30% 70%;
-        margin: 5vw;
-    }
-
-    .container-sobre img {
-        width: 30vw;
-    }
-
-    .container-descricao h2 {
-        font-size: 2vw;
-    }
-
-    .container-descricao p {
-        font-size: 1.7vw;
-        margin-top: 1vw;
-    }
-
-    .container-produtos h2 {
-        font-size: 2vw;
+        margin: 15px;
     }
 
     .produtos {
@@ -246,30 +359,7 @@ button {
     }
 
     .produto {
-        width: 20vw;
-        height: 50vw;
-    }
-
-    .produto img {
-        width: 20vw;
-    }
-
-    .produto h3 {
-        font-size: 1.8vw;
-    }
-
-    .produto p {
-        font-size: 4vw;
-    }
-
-    .produto button {
-        display: flex;
-        justify-content: center;
-        bottom: 0;
-        margin: auto;
-        width: 90%;
-        padding: 1vw;
-        font-size: 0.8vw;
+        height: 47vw;
     }
 }
 
@@ -288,11 +378,11 @@ button {
     }
 
     h1 {
-        font-size: 3vw;
+        font-size: 50px;
     }
 
     nav a {
-        font-size: 2vw;
+        font-size: 30px;
     }
 
     .container-sobre {
@@ -303,61 +393,83 @@ button {
     }
 
     .container-sobre img {
-        height: 30vw;
+        height: 350px;
     }
 
     .container-descricao {
-        margin-left: 5vw;
+        margin-left: 28px;
     }
 
     .container-descricao h2 {
-        font-size: 2.2vw;
+        font-size: 30px;
     }
 
     .container-descricao p {
-        font-size: 1.5vw;
-        margin-top: 2.5vw;
+        font-size: 21px;
+        margin-top: 25px;
     }
 
     .container-produtos h2 {
-        font-size: 2.2vw;
+        font-size: 28px;
     }
 
     .produtos {
-        display: grid;
-        grid-template-columns: repeat(4, 23.5%);
-        column-gap: 2%;
+        display: flex;
+        justify-content: space-between;
         text-align: center;
-        margin-top: 2vw;
+        width: 100%;
     }
 
     .produto {
-        margin: auto;
-        height: 80%;
+        width: 250px;
+        margin: 10px auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
     }
 
     .produto img {
-        width: 80%;
+        margin: 0;
+        width: 100%;
+        max-height: 300px;
+    }
+
+    .produto-descricao {
+        margin: 10px;
+        padding: 13px 0;
     }
 
     .produto h3 {
-        font-size: 150%;
-        margin-top: 5%;
+        font-size: 26px;
     }
 
     .produto p {
-        font-size: 100%;
-        padding: 2%;
+        font-size: 20px;
     }
 
     .produto button {
-        margin-top: 5%;
-        width: 80%;
-        padding: 5%;
-        font-size: 90%;
+        width: 100%;
+        font-size: 25px;
+        padding: 7px;
+        text-transform: uppercase;
     }
+
+    .produto button img {
+        width: 30px;
+        margin-left: 10px;
+    }
+
+    .container-rodape h2 {
+        padding-top: 15px;
+    }
+
+    .container-rodape img {
+        height: 50px;
+        margin: 15px;
+    }
+
+    .container-rodape div {
+        font-size: 25px;
+    }
+
 }
